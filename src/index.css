@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= BASE TOKENS ================= */
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 25 30% 12%;
+    --card: 40 25% 95%;
+    --card-foreground: 25 30% 12%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 25 30% 12%;
+    --primary: 25 35% 22%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 25 30% 12%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 25 30% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 43 74% 49%;
+    --radius: 0.75rem;
+
+    --gold: 43 74% 49%;
+    --gold-light: 43 74% 65%;
+    --brown-dark: 25 35% 18%;
+    --brown-medium: 25 30% 30%;
+    --cream: 40 33% 97%;
+    --cream-dark: 35 25% 90%;
+    --terracotta: 15 50% 45%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 74% 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(25 35% 22% / 0.7), hsl(25 35% 22% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(40 33% 97%), hsl(35 25% 92%));
+
+    --shadow-soft: 0 4px 20px hsl(25 35% 22% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(25 35% 22% / 0.12);
+    --shadow-gold: 0 4px 20px hsl(43 74% 49% / 0.3);
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 40 33% 97%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* ================= COMPONENTS ================= */
+@layer components {
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors;
+  }
+
+  .product-card {
+    @apply relative overflow-hidden rounded-xl bg-card transition-all duration-500;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-gold {
+    @apply px-6 py-3 rounded-lg font-medium transition-all;
+    background: var(--gradient-gold);
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
