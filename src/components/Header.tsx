@@ -36,7 +36,7 @@ const Header = () => {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
+          {/*  */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -49,7 +49,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Toggle & Mobile Menu Button */}
+          {/* */}
           <div className="flex items-center gap-4">
             <button
               onClick={toggleLanguage}
@@ -59,7 +59,7 @@ const Header = () => {
               <span className="text-sm font-medium uppercase">{language}</span>
             </button>
 
-            {/* Mobile Menu Button */}
+            {/**/}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
@@ -70,7 +70,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/*  */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 animate-slide-down">
             <div className="flex flex-col gap-2">

@@ -62,6 +62,17 @@ const Footer = () => {
         </svg>
       ),
     },
+
+    {
+  name: 'Shopee',
+  href: 'http://shopee.co.id/batikminishop',
+  icon: (
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M16.5 7h-1V6a3.5 3.5 0 10-7 0v1h-1A2.5 2.5 0 005 9.5v8A2.5 2.5 0 007.5 20h9a2.5 2.5 0 002.5-2.5v-8A2.5 2.5 0 0016.5 7zM10 6a2 2 0 114 0v1h-4V6zm7 11.5a.5.5 0 01-.5.5h-9a.5.5 0 01-.5-.5v-8a.5.5 0 01.5-.5h9a.5.5 0 01.5.5v8z"/>
+    </svg>
+  ),
+},
+
   ];
 
   return (
